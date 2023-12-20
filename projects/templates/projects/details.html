@@ -29,7 +29,7 @@ Tasks
                             <td>{{ task.assignee }}</td>
                             <td>{{ task.start_date }}</td>
                             <td>{{ task.due_date }}</td>
-                            <td>{{ task.is_completed|yesno:"yeah,no,maybe" }}</td>
+                            <td>{{ task.is_completed|yesno:"yes,no" }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
