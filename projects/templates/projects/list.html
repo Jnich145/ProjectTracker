@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 {% block title %}
-My Projects
-{%endblock title %}
-
+    My Projects
+{% endblock title %}
 {% block content %}
     <main>
         <div>
             <h1>My Projects</h1>
-            <p><a href="{% url 'create_project' %}">Create a new project</a></p>
+            <p>
+                <a href="{% url 'create_project' %}">Create a new project</a>
+            </p>
             {% if list_projects %}
                 <table>
                     <thead>
@@ -29,8 +30,8 @@ My Projects
                     </tbody>
                 </table>
             {% else %}
-            <p>You are not assigned to any projects</p>
+                <p>You are not assigned to any projects</p>
             {% endif %} 
         </div>
     </main>
-    {% endblock content %}
+{% endblock content %}

@@ -4,6 +4,7 @@ from projects.models import Project
 from tasks.forms import TaskForm
 from tasks.models import Task
 
+
 # Create your views here.
 @login_required
 def show_project(request, id):
@@ -16,7 +17,7 @@ def show_project(request, id):
 
 @login_required
 def create_task(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid():
             task = form.save()
@@ -25,11 +26,11 @@ def create_task(request):
             return redirect("list_projects")
     else:
         form = TaskForm()
-    
+
     context = {
         "form": form,
     }
-    return render(request, 'tasks/create.html', context)
+    return render(request, "tasks/create.html", context)
 
 
 @login_required
